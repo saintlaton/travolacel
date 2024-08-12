@@ -10,7 +10,7 @@ function LocationHilight() {
   const getLocations = async () => {
     try {
       const result = await axios.get(
-        `https://travolacel-server-4la6w0laz-saintlatons-projects.vercel.app/trips?keywords=${inputSearch}`
+        `https://travolacel-server.vercel.app/trips?keywords=${inputSearch}`
       );
       console.log(result.data.data);
       setLocations(result.data.data);
