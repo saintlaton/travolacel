@@ -10,7 +10,7 @@ function LocationHilight() {
   const getLocations = async () => {
     try {
       const result = await axios.get(
-        `http://localhost:4001/trips?keywords=${inputSearch}`
+        `${import.meta.env.VITE_API_BASE_URL}/trips?keywords=${inputSearch}`
       );
       console.log(result.data.data);
       setLocations(result.data.data);
